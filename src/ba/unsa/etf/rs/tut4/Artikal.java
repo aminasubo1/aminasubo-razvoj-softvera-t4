@@ -12,12 +12,7 @@ public class Artikal {
         setCijena(cijena);
 
     }
-    public Artikal(String s) {  //konstruktor
-        /*
-        konstruktor koji prima jedan argument tipa String oblika
-        "šifra,naziv,cijena" (string u kojem su šifra, naziv i cijena
-        artikla razdvojeni zarezom);
-         */
+    public Artikal(String s) {
         String[] rez = s.split(",");
         setSifra(rez[0]);
         setNaziv(rez[1]);
@@ -58,11 +53,7 @@ public class Artikal {
     }
 
 
-    /*
-    metodu toString koja vraća string istog oblika kao onaj kojeg prima upravo
-    opisani konstruktor - podsjetimo se sa predavanja da je ovo ustvari metoda
-    klase Object koju "preklapamo" u našoj klasi Artikal;
-     */
+
     public String toString(){
         String s = "";
         s = s + this.getSifra() + "," + this.getNaziv() + "," + this.getCijena();
@@ -76,11 +67,7 @@ public class Artikal {
                 this.cijena == ((Artikal) o).cijena);
     }
 
-    /*
-    javnu statičku metodu izbaciDuplikate koja prima ArrayList artikala,
-    te iz ove liste izbacuje sve duplikate i tako prečišćenu listu vraća;
-    pod pojmom "duplikata" smatraju se dva artikla koji posjeduju istu šifru, naziv i cijenu;
-     */
+
 
     public static void izbaciDuplikate (ArrayList<Artikal> artikli){
         for (int i = 0; i < artikli.size(); i++) {
